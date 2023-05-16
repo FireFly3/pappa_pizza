@@ -1,12 +1,14 @@
 import React from 'react';
 
+import logo from '../../assets/img/Logo_Papa-Pizza.jpg';
+
 const Header = () => {
     return (
         <div>
             <div className="header">
                 <div className="container">
                     <div className="header__logo">
-                        <img width="38" src="../img/Logo_Papa-Pizza.jpg" alt="Pizza logo"/>
+                        <img width="38" src={logo} alt="Pizza logo"/>
                         <div>
                             <h1>Papa Pizza</h1>
                             <p>the most delicious pizza in the universe</p>
