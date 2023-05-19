@@ -3,21 +3,20 @@ import {Categories} from "./components/categories/Categories";
 import {Sort} from "./components/sort/Sort";
 import {PizzaBlock} from "./components/pizzaBlock/PizzaBlock";
 import "./scss/app.scss"
-import pizzas from "./assets/pizzas.json"
 import {useEffect, useState} from "react";
 
 
 function App() {
 
-    const [items, setItems] = useState();
+    const [items, setItems] = useState([]);
 
     useEffect(() => {
         fetch('https://646380b94dca1a66135fd25b.mockapi.io/pizzas')
             .then((response) => response.json())
             .then((data) => {
                 setItems(data)
-            }, [])
-    });
+            })
+    }, []);
 
 
     return (
